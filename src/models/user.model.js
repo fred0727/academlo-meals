@@ -26,4 +26,11 @@ const User = db.define('users', {
     allowNull: true,
     defaultValue: 'normal',
   },
+  status: {
+    type: DataTypes.ENUM('active', 'disabled'),
+    allowNull: false,
+    defaultValue: 'active',
+  },
 });
+
+module.exports = User;
